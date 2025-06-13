@@ -1,0 +1,16 @@
+.mySwiper {
+	max-width: 500px !important;
+	max-width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #eee;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

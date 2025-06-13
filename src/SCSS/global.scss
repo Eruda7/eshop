@@ -1,0 +1,18 @@
+@use '../SCSS/mixins' as *;
+
+.container {
+	max-width: 85%;
+	margin: 0 auto;
+
+	@media screen and (min-width: 1921px) {
+		max-width: 1600px;
+	}
+
+	@media screen and (max-width: 1440px) {
+		max-width: 95%;
+	}
+
+	@include mobileL {
+		max-width: 95%;
+	}
+}

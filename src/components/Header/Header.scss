@@ -1,0 +1,76 @@
+.main-header {
+	background-color: #222;
+	color: #fff;
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	.header_form {
+		width: 60%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		input {
+			color: white;
+		}
+		.MuiTextField-root {
+			width: 80%;
+			label {
+				color: white;
+			}
+		}
+	}
+	.header_search_btn {
+		color: rgb(0, 0, 0);
+		height: 40px;
+		width: 100px;
+		font-size: 20px;
+	}
+
+	.header_auth_btn {
+		display: inline-block;
+		border-radius: 10px;
+		background-color: #4f46e5;
+		border: none;
+		color: #ffffff;
+		text-align: center;
+		font-size: 17px;
+		padding: 16px;
+		width: 130px;
+		transition: all 0.5s;
+		cursor: pointer;
+		margin: 5px;
+		& span {
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+			&::after {
+				content: '»';
+				position: absolute;
+				opacity: 0;
+				top: 0;
+				right: -15px;
+				transition: 0.5s;
+			}
+		}
+
+		&:hover span {
+			padding-right: 15px;
+			&::after {
+				opacity: 1;
+				right: 0;
+			}
+		}
+	}
+}
+
+.logo-link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
