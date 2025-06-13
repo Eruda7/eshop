@@ -4,6 +4,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"homepage": "https://eruda7.github.io/eshop",
+	"postbuild": "cp dist/index.html dist/404.html",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",

@@ -10,28 +10,33 @@ import Register from '../Pages/Register/Register'
 import PrivateRoute from './PrivateRoute'
 import PublicRoute from './PublicRoute'
 
-export const router = createBrowserRouter([
-	{
-		element: <PublicRoute />,
-		children: [
-			{ path: '/login', element: <Login /> },
-			{ path: '/register', element: <Register /> },
-		],
-	},
+export const router = createBrowserRouter(
+	[
+		{
+			element: <PublicRoute />,
+			children: [
+				{ path: '/login', element: <Login /> },
+				{ path: '/register', element: <Register /> },
+			],
+		},
 
-	{
-		path: '/',
-		element: <App />,
-		children: [
-			{ index: true, element: <Home /> },
-			{ path: 'products', element: <Products /> },
-			{ path: 'products/:id', element: <ProductDetail /> },
+		{
+			path: '/',
+			element: <App />,
+			children: [
+				{ index: true, element: <Home /> },
+				{ path: 'products', element: <Products /> },
+				{ path: 'products/:id', element: <ProductDetail /> },
 
-			{
-				element: <PrivateRoute />,
-				children: [{ path: 'cart', element: <Cart /> }],
-			},
-			{ path: '*', element: <NotFound /> },
-		],
-	},
-])
+				{
+					element: <PrivateRoute />,
+					children: [{ path: 'cart', element: <Cart /> }],
+				},
+				{ path: '*', element: <NotFound /> },
+			],
+		},
+	],
+	{
+		basename: "'eshop",
+	}
+)
